@@ -1,0 +1,15 @@
+spring:
+    datasource:
+        driver-class-name: org.postgresql.Driver
+        hikari:
+            auto-commit: true
+            connection-timeout: 20000
+            idle-timeout: 10000
+            max-lifetime: 1000
+            maximum-pool-size: 10
+            minimum-idle: 10
+        password: postgres
+        url: jdbc:postgresql://localhost:5432/category_db
+        username: postgres
+    profiles:
+        active: dev
