@@ -28,7 +28,5 @@ public class Category implements Serializable {
     @Column(name = "sort_order")
     private int order;
 
-    @Column(name = "store_id")
-    private UUID storeId;
 
 }
