@@ -13,3 +13,5 @@ spring:
         password: postgres
     profiles:
         active: dev
+    application:
+        name: category-service
