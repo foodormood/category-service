@@ -24,4 +24,9 @@ public class CategoryController {
     public ResponseEntity<?> create(@RequestBody Category category) {
         return ResponseEntity.ok(categoryService.create(category));
     }
+
+    @PostMapping("/update")
+    public ResponseEntity<?> update(@RequestBody Category category) {
+        return ResponseEntity.ok(categoryService.create(category));
+    }
 }
