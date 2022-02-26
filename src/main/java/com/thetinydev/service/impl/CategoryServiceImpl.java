@@ -27,6 +27,6 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public Category getById(UUID id) {
-        return categoryRepository.getById(id);
+        return categoryRepository.findDistinctById(id);
     }
 }

@@ -25,7 +25,11 @@ public class CategoryController {
 
     @GetMapping("/category/{id}")
     public ResponseEntity<?> fetchId(@PathVariable UUID id) {
-        return ResponseEntity.ok(categoryService.getById(id));
+        var cat = categoryService.getById(id);
+        if (cat == null) {
+            return ResponseEntity.noContent().build();
+        }
+        return ResponseEntity.ok(cat);
     }
 
     @PostMapping("/create")
