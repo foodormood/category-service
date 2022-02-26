@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.UUID;
 
 @RequiredArgsConstructor
 @Service
@@ -22,5 +23,10 @@ public class CategoryServiceImpl implements CategoryService {
     @Override
     public Category create(Category category) {
         return categoryRepository.save(category);
+    }
+
+    @Override
+    public Category getById(UUID id) {
+        return categoryRepository.getById(id);
     }
 }
